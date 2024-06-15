@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/sand",
+  "textures": {
+    "all": "medsalmoonmod:block/moon_dust"
+  }
+}
