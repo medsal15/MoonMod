@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cobblestone",
+  "textures": {
+    "all": "medsalmoonmod:block/moon_cobble"
+  }
+}

@@ -1,4 +1,6 @@
 {
+  "block.medsalmoonmod.moon_cobble": "Cobbled Moonstone",
   "block.medsalmoonmod.moon_dust": "Moon Dust",
+  "block.medsalmoonmod.moon_stone": "Moonstone",
   "itemGroup.medsalmoonmod": "Moon Mod"
 }

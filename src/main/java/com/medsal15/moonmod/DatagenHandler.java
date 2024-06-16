@@ -2,13 +2,17 @@ package com.medsal15.moonmod;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import com.medsal15.moonmod.datagen.BlockState;
 import com.medsal15.moonmod.datagen.BlockSubLootTable;
-import com.medsal15.moonmod.datagen.BlockTags;
+import com.medsal15.moonmod.datagen.tags.MoonBlockTags;
+import com.medsal15.moonmod.datagen.tags.MoonItemTags;
 import com.medsal15.moonmod.datagen.ItemModel;
 import com.medsal15.moonmod.datagen.Language;
+import com.medsal15.moonmod.datagen.MoonRecipes;
 
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -25,18 +29,28 @@ public class DatagenHandler {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
+        MoonBlockTags blockTags = new MoonBlockTags(output, lookupProvider, existingFileHelper);
+
+        // Client-side
         generator.addProvider(event.includeClient(), new BlockState(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new ItemModel(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new Language(output, "en_us"));
+
+        // Tags
+        generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(),
-                new BlockTags(output, event.getLookupProvider(), existingFileHelper));
-        // todo ask why it gives an error on the discord
+                new MoonItemTags(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
+
+        // Loot
         generator.addProvider(event.includeServer(),
                 new LootTableProvider(output, Collections.emptySet(), List
                         .of(new LootTableProvider.SubProviderEntry(
-                                BlockSubLootTable::new, LootContextParamSets.EMPTY)),
-                        event.getLookupProvider()));
+                                BlockSubLootTable::new, LootContextParamSets.BLOCK)),
+                        lookupProvider));
 
+        // Recipes
+        generator.addProvider(event.includeServer(), new MoonRecipes(output, lookupProvider));
     }
 }

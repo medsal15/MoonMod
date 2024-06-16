@@ -14,7 +14,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 @Mod(MoonMod.MODID)
-public class MoonMod {
+public final class MoonMod {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "medsalmoonmod";
     // Directly reference a slf4j logger
@@ -35,20 +35,22 @@ public class MoonMod {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS
             .register("moonmod", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.medsalmoonmod"))
-                    .icon(() -> Items.MOON_DUST.get().getDefaultInstance())
+                    .icon(() -> MoonItems.MOON_DUST.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
-                        output.accept(Items.MOON_DUST.get());
+                        output.accept(MoonItems.MOON_DUST.get());
+                        output.accept(MoonItems.MOON_STONE.get());
+                        output.accept(MoonItems.MOON_COBBLE.get());
                     }).build());
 
     public MoonMod(IEventBus modEventBus, ModContainer modContainer) {
         // todo init config here
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        Blocks.register(BLOCKS);
+        MoonBlocks.register(BLOCKS);
         BLOCKS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so items get registered
-        Items.register(ITEMS);
+        MoonItems.register(ITEMS);
         ITEMS.register(modEventBus);
 
         // Register the Deferred Register to the mod event bus so tabs get registered

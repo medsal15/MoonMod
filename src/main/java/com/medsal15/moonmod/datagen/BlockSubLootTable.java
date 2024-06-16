@@ -2,7 +2,7 @@ package com.medsal15.moonmod.datagen;
 
 import java.util.Set;
 
-import com.medsal15.moonmod.Blocks;
+import com.medsal15.moonmod.MoonBlocks;
 import com.medsal15.moonmod.MoonMod;
 
 import net.minecraft.core.Holder;
@@ -10,6 +10,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.storage.loot.entries.LootItem;
 
 public class BlockSubLootTable extends BlockLootSubProvider {
     public BlockSubLootTable(HolderLookup.Provider lookupProvider) {
@@ -26,6 +27,10 @@ public class BlockSubLootTable extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(Blocks.MOON_DUST.get());
+        dropSelf(MoonBlocks.MOON_DUST.get());
+        add(MoonBlocks.MOON_STONE.get(),
+                createSilkTouchDispatchTable(MoonBlocks.MOON_STONE.get(),
+                        LootItem.lootTableItem(MoonBlocks.MOON_COBBLE)));
+        dropSelf(MoonBlocks.MOON_COBBLE.get());
     }
 }
