@@ -11,7 +11,7 @@ public class MoonItems {
 
     public static void register(DeferredRegister.Items items) {
         MOON_DUST = items.registerSimpleBlockItem("moon_dust", MoonBlocks.MOON_DUST);
-        MOON_DUST = items.registerSimpleBlockItem("moon_stone", MoonBlocks.MOON_STONE);
-        MOON_DUST = items.registerSimpleBlockItem("moon_cobble", MoonBlocks.MOON_COBBLE);
+        MOON_STONE = items.registerSimpleBlockItem("moon_stone", MoonBlocks.MOON_STONE);
+        MOON_COBBLE = items.registerSimpleBlockItem("moon_cobble", MoonBlocks.MOON_COBBLE);
     }
 }
