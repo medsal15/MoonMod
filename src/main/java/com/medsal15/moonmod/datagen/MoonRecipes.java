@@ -23,7 +23,6 @@ public class MoonRecipes extends RecipeProvider {
 
     @Override
     protected void buildRecipes(@Nonnull RecipeOutput output) {
-        // todo find why it errors
         SimpleCookingRecipeBuilder
                 .smelting(Ingredient.of(MoonBlocks.MOON_COBBLE), RecipeCategory.BUILDING_BLOCKS, MoonBlocks.MOON_STONE,
                         .1f, SMELTING_TIME)

@@ -26,11 +26,11 @@
                   }
                 }
               ],
-              "name": "minecraft:air"
+              "name": "medsalmoonmod:moon_stone"
             },
             {
               "type": "minecraft:item",
-              "name": "minecraft:air"
+              "name": "medsalmoonmod:moon_cobble"
             }
           ]
         }

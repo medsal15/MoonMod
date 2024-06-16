@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_moon_cobble": {
+      "conditions": {
+        "items": [
+          {
+            "items": "medsalmoonmod:moon_cobble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:smelting/moon_cobble"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_moon_cobble"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:smelting/moon_cobble"
+    ]
+  }
+}
