@@ -29,5 +29,9 @@ public class MoonRecipes extends RecipeProvider {
                         .1f, SMELTING_TIME)
                 .unlockedBy("has_moon_cobble", has(MoonBlocks.MOON_COBBLE))
                 .save(output, MoonUtils.namespaced("smelting/moon_cobble"));
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MoonBlocks.MOON_DEEPCOBBLE), RecipeCategory.BUILDING_BLOCKS,
+                MoonBlocks.MOON_DEEPROCK, .1f, SMELTING_TIME)
+                .unlockedBy("has_moon_deepcobble", has(MoonBlocks.MOON_DEEPCOBBLE))
+                .save(output, MoonUtils.namespaced("smelting/moon_deepcobble"));
     }
 }

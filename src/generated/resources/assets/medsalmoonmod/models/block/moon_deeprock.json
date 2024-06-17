@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/deepslate",
+  "textures": {
+    "end": "medsalmoonmod:block/moon_deeprock_top",
+    "side": "medsalmoonmod:block/moon_deeprock"
+  }
+}
