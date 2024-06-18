@@ -1,8 +1,7 @@
 {
   "values": [
-    "medsalmoonmod:moon_stone",
-    "medsalmoonmod:moon_cobble",
-    "medsalmoonmod:moon_deeprock",
-    "medsalmoonmod:moon_deepcobble"
+    "medsalmoonmod:lunarite_ore",
+    "medsalmoonmod:deepslate_lunarite_ore",
+    "medsalmoonmod:lunarite_block"
   ]
 }

@@ -1,5 +1,6 @@
 package com.medsal15.moonmod.datagen;
 
+import com.medsal15.moonmod.MoonItems;
 import com.medsal15.moonmod.MoonMod;
 
 import net.minecraft.data.PackOutput;
@@ -13,5 +14,6 @@ public class ItemModel extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        basicItem(MoonItems.LUNARITE_GEM.asItem());
     }
 }

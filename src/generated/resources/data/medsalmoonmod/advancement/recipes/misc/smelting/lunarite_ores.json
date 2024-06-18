@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lunarite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ores/lunarite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "medsalmoonmod:smelting/lunarite_ores"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lunarite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "medsalmoonmod:smelting/lunarite_ores"
+    ]
+  }
+}

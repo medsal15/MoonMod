@@ -1,8 +1,11 @@
 {
-  "block.medsalmoonmod.moon_cobble": "Cobbled Moonstone",
-  "block.medsalmoonmod.moon_deepcobble": "Cobbled Moonrock",
-  "block.medsalmoonmod.moon_deeprock": "Deep Moonrock",
+  "block.medsalmoonmod.deepslate_lunarite_ore": "Deepslate Lunarite Ore",
+  "block.medsalmoonmod.lunarite_block": "Lunarite Block",
+  "block.medsalmoonmod.lunarite_ore": "Lunarite Ore",
   "block.medsalmoonmod.moon_dust": "Moon Dust",
-  "block.medsalmoonmod.moon_stone": "Moonstone",
-  "itemGroup.medsalmoonmod": "Moon Mod"
+  "item.medsalmoonmod.lunarite": "Lunarite",
+  "itemGroup.medsalmoonmod": "Moon Mod",
+  "tag.item.c.gems.lunarite": "Lunarite Gems",
+  "tag.item.c.ores.lunarite": "Lunarite Ores",
+  "tag.item.c.storage_blocks.lunarite": "Lunarite Storage Blocks"
 }

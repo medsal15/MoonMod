@@ -32,13 +32,12 @@ public final class MoonMod {
 
     // Creates a creative tab with the id "examplemod:example_tab" for the example
     // item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOON_TAB = CREATIVE_MODE_TABS
             .register("moonmod", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.medsalmoonmod"))
                     .icon(() -> MoonItems.MOON_DUST.get().getDefaultInstance())
-                    .displayItems((parameters, output) -> {
-                        output.accept(MoonItems.MOON_DUST.get());
-                    }).build());
+                    .displayItems(MoonItems::addItems)
+                    .build());
 
     public MoonMod(IEventBus modEventBus, ModContainer modContainer) {
         // todo init config here

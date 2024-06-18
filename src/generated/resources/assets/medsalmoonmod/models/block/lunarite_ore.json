@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/coal_ore",
+  "textures": {
+    "all": "medsalmoonmod:block/lunarite_ore"
+  }
+}

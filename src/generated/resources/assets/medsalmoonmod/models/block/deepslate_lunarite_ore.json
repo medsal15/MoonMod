@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/deepslate_coal_ore",
+  "textures": {
+    "all": "medsalmoonmod:block/deepslate_lunarite_ore"
+  }
+}
