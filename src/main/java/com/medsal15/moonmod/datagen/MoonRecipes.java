@@ -4,7 +4,6 @@ import java.util.concurrent.CompletableFuture;
 
 import javax.annotation.Nonnull;
 
-import com.medsal15.moonmod.MoonBlocks;
 import com.medsal15.moonmod.MoonUtils;
 
 import net.minecraft.core.HolderLookup.Provider;
@@ -24,14 +23,5 @@ public class MoonRecipes extends RecipeProvider {
 
     @Override
     protected void buildRecipes(@Nonnull RecipeOutput output) {
-        SimpleCookingRecipeBuilder
-                .smelting(Ingredient.of(MoonBlocks.MOON_COBBLE), RecipeCategory.BUILDING_BLOCKS, MoonBlocks.MOON_STONE,
-                        .1f, SMELTING_TIME)
-                .unlockedBy("has_moon_cobble", has(MoonBlocks.MOON_COBBLE))
-                .save(output, MoonUtils.namespaced("smelting/moon_cobble"));
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(MoonBlocks.MOON_DEEPCOBBLE), RecipeCategory.BUILDING_BLOCKS,
-                MoonBlocks.MOON_DEEPROCK, .1f, SMELTING_TIME)
-                .unlockedBy("has_moon_deepcobble", has(MoonBlocks.MOON_DEEPCOBBLE))
-                .save(output, MoonUtils.namespaced("smelting/moon_deepcobble"));
     }
 }

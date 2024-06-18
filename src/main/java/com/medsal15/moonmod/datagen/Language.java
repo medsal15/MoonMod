@@ -15,12 +15,6 @@ public class Language extends LanguageProvider {
     protected void addTranslations() {
         addBlock(MoonBlocks.MOON_DUST, "Moon Dust");
 
-        addBlock(MoonBlocks.MOON_STONE, "Moonstone");
-        addBlock(MoonBlocks.MOON_COBBLE, "Cobbled Moonstone");
-
-        addBlock(MoonBlocks.MOON_DEEPROCK, "Deep Moonrock");
-        addBlock(MoonBlocks.MOON_DEEPCOBBLE, "Cobbled Moonrock");
-
         add("itemGroup.medsalmoonmod", "Moon Mod");
     }
 

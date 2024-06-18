@@ -24,9 +24,6 @@ public class MoonItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags(@Nonnull Provider pProvider) {
-        tag(ItemTags.STONE_CRAFTING_MATERIALS).add(MoonBlocks.MOON_COBBLE.asItem(),
-                MoonBlocks.MOON_DEEPCOBBLE.asItem());
-        tag(ItemTags.STONE_TOOL_MATERIALS).add(MoonBlocks.MOON_COBBLE.asItem(), MoonBlocks.MOON_DEEPCOBBLE.asItem());
     }
 
 }

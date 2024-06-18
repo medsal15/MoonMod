@@ -38,12 +38,6 @@ public final class MoonMod {
                     .icon(() -> MoonItems.MOON_DUST.get().getDefaultInstance())
                     .displayItems((parameters, output) -> {
                         output.accept(MoonItems.MOON_DUST.get());
-
-                        output.accept(MoonItems.MOON_STONE.get());
-                        output.accept(MoonItems.MOON_COBBLE.get());
-
-                        output.accept(MoonItems.MOON_DEEPROCK.get());
-                        output.accept(MoonItems.MOON_DEEPCOBBLE.get());
                     }).build());
 
     public MoonMod(IEventBus modEventBus, ModContainer modContainer) {

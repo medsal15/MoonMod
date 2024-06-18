@@ -24,9 +24,5 @@ public class MoonBlockTags extends BlockTagsProvider {
     @Override
     protected void addTags(@Nonnull Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_SHOVEL).add(MoonBlocks.MOON_DUST.get());
-        tag(BlockTags.MINEABLE_WITH_PICKAXE).add(MoonBlocks.MOON_STONE.get(), MoonBlocks.MOON_COBBLE.get(),
-                MoonBlocks.MOON_DEEPROCK.get(), MoonBlocks.MOON_DEEPCOBBLE.get());
-
-        tag(BlockTags.STONE_ORE_REPLACEABLES).add(MoonBlocks.MOON_STONE.get(), MoonBlocks.MOON_DEEPROCK.get());
     }
 }
